@@ -8,6 +8,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <ctype.h>
+#define _GNU_SOURCE
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -46,10 +47,10 @@ typedef struct instruction_s
  */
 typedef struct bus_s
 {
-	int lifi;
 	char *arg;
 	FILE *file;
 	char *content;
+	int lifi;
 }  bus_t;
 extern bus_t bus;
 
